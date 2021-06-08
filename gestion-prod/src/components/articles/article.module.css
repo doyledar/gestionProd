@@ -1,0 +1,79 @@
+.articlesList{
+    display: flex;
+    justify-content: space-between; 
+}
+
+.articlesDetails{
+    padding-left: 2rem;
+}
+
+.summary{
+    font-size: 1.2rem;
+} 
+
+.summary .reference a{
+    color:#8181CA;
+    font-size: 1.2rem;
+    display: inline-block;
+    margin: .5rem 0rem;
+}
+
+/* Liste d'articles */
+
+.btnNext{
+    display: inline-block;
+    background: #F7D961;
+    border-radius: 5px;
+    margin: 2rem 0;
+    border: none;
+    padding: .5rem;
+    
+}
+
+h2{
+    font-size: 2.5rem;
+    
+}
+
+svg{
+    margin-left: 3rem;
+    color: rgb(89, 78, 121);
+    float: right;
+}
+
+/* Paramètres */
+
+.parametres{
+    display: flex;
+    margin-right: 5rem;
+    margin-bottom: 1rem;
+}
+
+.parametres label{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    min-width: 10rem;
+}
+
+.parametres input{
+    max-height: 2rem;
+}
+
+
+
+.parametres input[type=checkbox]{
+    opacity: 100%;
+    position: relative;
+    
+}
+
+.details{
+    padding: 0;
+}
+
+
+
+
+
+
+

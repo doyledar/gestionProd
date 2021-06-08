@@ -1,0 +1,19 @@
+h2{
+    font-size: 2rem;
+    display: inline-block;
+}
+
+.select{
+   display: flex;
+   padding: .5rem;
+}
+
+.selectTitle{
+    margin-right: 1rem;
+    font-size: 1.1rem;
+}
+
+.selectList{
+    display: block;
+    font-size: 1rem;
+}
