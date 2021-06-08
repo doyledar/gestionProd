@@ -7,39 +7,43 @@ class typesDLCList extends Component {
     constructor(props) {
       super(props);
       this.refreshData = this.refreshData.bind(this);
- 
-      this.state = {
-          currentTypeDLC: null,
-          currentIndex: -1,
-      }
+      this.handleChange = this.handleChange.bind(this) 
+      console.log('l 11 ' + props.type)      
+      this.state = { value: props.type } 
     }
-  
+
+    
     componentDidMount() {
    
       this.props.retrieveTypesDLC();
-      console.log(this.props)
     }
 
     refreshData(){
         this.setState({
-            currentTypeDLC: null,
-            currentIndex: -1
-        })
+                    })
     }
+
+    handleChange(e){
+      this.setState({value: e.target.value})
+    }
+
+    
 
     render() {
         
-        const { typesDLC } = this.props;
+        const { typesDLC, articleDLC  } = this.props;
+        
         
         return (
           <div className="select">
               <label className="selectTitle">
                   Code DLC
               </label>
-              <select className="selectList" value='TEST' onChange={this.handleChange}>
+              
+              <select className="selectList" id="DLCArticle" value={ articleDLC } onChange={ this.handleChange }>
                   {typesDLC &&
-                    typesDLC.map((typeDLC, index) => (
-                        <option key={index}>
+                    typesDLC.map((typeDLC) => (
+                        <option value={typeDLC.CODE} >
                             { typeDLC.CODE } - { typeDLC.DESIGNATION } 
                         </option>
                         
@@ -54,7 +58,7 @@ class typesDLCList extends Component {
     
     const mapStateToProps = (state) => {
       return {
-        typesDLC: state.typesDLC,
+        typesDLC: state.typesDLC
       };
     };
     

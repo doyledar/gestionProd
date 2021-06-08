@@ -81,17 +81,8 @@ class ArticleDetails extends Component {
                         <form className="col s12 details">
                             <div className="col s4">
                             
-                            <div className={styles.parametres}>
-                                <label>Type d'article</label>
-                                <input type="text" value={this.state.currentArticle.TYPE} />
-                            </div>
-                            <div className={styles.parametres}>
-                                <label>Code DLC</label>
-                                <input type="text" value={this.state.currentArticle.CODE_DLC} />
-                            </div>
-
-                            {/* <TypesArticlesList articleType={this.state.currentArticle.TYPE}/> */}
-                            {/* <TypesDLCList /> */} 
+                            <TypesArticlesList articleType={this.state.currentArticle.TYPE}/> 
+                            <TypesDLCList articleDLC={this.state.currentArticle.CODE_DLC}/>  
                                          
                             {/* <TypesAnimalesList/> */}
                             

@@ -31,7 +31,7 @@ class typesArticlesList extends Component {
 
     render() {
         
-        const { typesArticles,type  } = this.props;
+        const { typesArticles, articleType  } = this.props;
         
         console.log(this.state) 
         //console.log('l 42 ' + this.props.articleType)
@@ -41,7 +41,7 @@ class typesArticlesList extends Component {
                   Type
               </label>
               
-              <select className="selectList" id="typeArticle" value={ type } onChange={ this.handleChange }>
+              <select className="selectList" id="typeArticle" value={ articleType } onChange={ this.handleChange }>
                   {typesArticles &&
                     typesArticles.map((typeArticle) => (
                         <option value={typeArticle.CODE} >
