@@ -26,16 +26,20 @@ class typesRemplacementsList extends Component {
         })
     }
 
+    handleChange(e){
+      this.setState({value: e.target.value})
+    }
+
     render() {
         
-        const { typesRemplacements } = this.props;
+        const { articleTypeRemplacement, typesRemplacements } = this.props;
         
         return (
           <div className="select">
               <label className="selectTitle">
                   Famille de remplacement
               </label>
-              <select className="selectList" value='TEST' onChange={this.handleChange}>
+              <select className="selectList" value={articleTypeRemplacement} onChange={this.handleChange}>
                   {typesRemplacements &&
                     typesRemplacements.map((typeRemplacement, index) => (
                         <option key={index}>

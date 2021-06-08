@@ -27,19 +27,23 @@ class typesAnimalesList extends Component {
         })
     }
 
+    handleChange(e){
+      this.setState({value: e.target.value})
+    }
+
     render() {
         
-        const { typesAnimales } = this.props;
+        const { typesAnimales, articleEspeceAnimale } = this.props;
         //console.log(this.props)
         return (
           <div className="select">
               <label className="selectTitle">
                   Espèce animale
               </label>
-              <select className="selectList" value='TEST' onChange={this.handleChange}>
+              <select className="selectList" id="especeAnimale" value={ articleEspeceAnimale } onChange={ this.handleChange }>
                   {typesAnimales &&
                     typesAnimales.map((typeAnimale, index) => (
-                        <option key={index}>
+                        <option key={index} value={typeAnimale.CODE} >
                             { typeAnimale.CODE } - { typeAnimale.DESIGNATION } 
                         </option>
                         

@@ -42,10 +42,10 @@ class typesDLCList extends Component {
               
               <select className="selectList" id="DLCArticle" value={ articleDLC } onChange={ this.handleChange }>
                   {typesDLC &&
-                    typesDLC.map((typeDLC) => (
-                        <option value={typeDLC.CODE} >
+                    typesDLC.map((typeDLC, index) => (
+                        <option key={index}value={typeDLC.CODE} >
                             { typeDLC.CODE } - { typeDLC.DESIGNATION } 
-                        </option>
+                        </option> 
                         
                     ))}
                   

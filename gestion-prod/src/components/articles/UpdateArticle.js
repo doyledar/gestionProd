@@ -31,7 +31,7 @@ class ArticleDetails extends Component {
     componentDidMount() {
         this.getArticle(this.props.match.params.id)
      //   console.log(this.props.typesArticles)
-       // this.props.retrieveTypesArticles();
+       this.props.retrieveTypesArticles();
         
     }
 

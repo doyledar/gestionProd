@@ -8,7 +8,7 @@ class typesArticlesList extends Component {
       super(props);
       this.refreshData = this.refreshData.bind(this);
       this.handleChange = this.handleChange.bind(this) 
-      console.log('l 11 ' + props.type)      
+      //console.log('l 11 ' + props.type)      
       this.state = { value: props.type } 
     }
 
@@ -33,7 +33,7 @@ class typesArticlesList extends Component {
         
         const { typesArticles, articleType  } = this.props;
         
-        console.log(this.state) 
+        //console.log(this.state) 
         //console.log('l 42 ' + this.props.articleType)
         return (
           <div className="select">
@@ -43,8 +43,8 @@ class typesArticlesList extends Component {
               
               <select className="selectList" id="typeArticle" value={ articleType } onChange={ this.handleChange }>
                   {typesArticles &&
-                    typesArticles.map((typeArticle) => (
-                        <option value={typeArticle.CODE} >
+                    typesArticles.map((typeArticle, index) => (
+                        <option key={index} value={typeArticle.CODE} >
                             { typeArticle.CODE } - { typeArticle.DESIGNATION } 
                         </option>
                         

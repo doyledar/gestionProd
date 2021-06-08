@@ -43,7 +43,7 @@ class ArticlesList extends Component {
                     {articles &&
                     articles.map((article, index) => (
                         <li key={index}>
-                            <NavLink article={article} id={article.ARTICLE} to = {'/article/' + article.ARTICLE} >{ article.ARTICLE } - { article.REFERENCE } - { article.DESIGNATION }</NavLink> 
+                            <NavLink  to = {'/article/' + article.ARTICLE} >{ article.ARTICLE } - { article.REFERENCE } - { article.DESIGNATION }</NavLink> 
                         </li>
                     ))}
                 </ul>

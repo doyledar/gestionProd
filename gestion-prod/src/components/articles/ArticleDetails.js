@@ -8,7 +8,7 @@ import TypesRemplacementsList from '../typesRemplacements/typesRemplacementsList
 import TypesArticlesList from '../typesArticles/typesArticlesList'
 import TypesDLCList from '../typesDLC/typesDLCList'
 import TypesAnimalesList from '../typesAnimales/typesAnimalesList'
-import { retrieveTypesArticles } from '../../store/actions/typesArticles'
+import { retrieveTypesArticles } from '../../store/actions/old_typesArticles'
 import { Link, NavLink } from 'react-router-dom'
 import UpdateArticle from './UpdateArticle'
 //import {Select} from 'react-select'
@@ -81,16 +81,25 @@ class ArticleDetails extends Component {
                         <form className="col s12 details">
                             <div className="col s4">
                             
-                            <TypesArticlesList articleType={this.state.currentArticle.TYPE}/> 
-                            <TypesDLCList articleDLC={this.state.currentArticle.CODE_DLC}/>  
-                                         
-                            {/* <TypesAnimalesList/> */}
-                            
+                            {/* <TypesArticlesList articleType={this.state.currentArticle.TYPE}/> */} 
+                            {/* <TypesDLCList articleDLC={this.state.currentArticle.CODE_DLC}/> */}  
+                            {/* <TypesAnimalesList articleEspeceAnimale={this.state.currentArticle.FAMILLE}/> */}
+                            {/* <TypesRemplacementsList articleTypeRemplacement={this.state.currentArticle.REMPLACEMENT}/> */}
+                            <div className={styles.parametres}>
+                                <label>Type d'article</label>
+                                <input type="text" value={this.state.currentArticle.TYPE} />
+                            </div>
+
+                            <div className={styles.parametres}>
+                                <label>Code DLC</label>
+                                <input type="text" value={this.state.currentArticle.CODE_DLC} />
+                            </div>
+
                             <div className={styles.parametres}>
                                 <label>Espèce animale</label>
                                 <input type="text" value={this.state.currentArticle.ESPECE_ANIMALE} />
-                            </div>
-
+                            </div>    
+                            
                             <div className={styles.parametres}>
                                 <label>Famille de contamination</label>
                                 <input type="text" value={this.state.currentArticle.FAMILLE} />
